@@ -9,7 +9,9 @@ const io = require('socket.io')(http);
 const PORT = process.env.PORT || 3001;
 
 io.on('connection', (socket) => {
-  console.log('socket.io connected', socket.id);
+  socket.on('chat message', (msg) => {
+    io.emit('chat message', msg);
+  });
 });
 
 // app.use(express.static(path.join(__dirname, 'public')));
