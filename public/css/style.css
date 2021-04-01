@@ -4,3 +4,18 @@ body{
 .form-group {
     padding: 10px;
 }
+
+.bottom {
+    padding: 15px;
+  
+}
+
+.logout {
+    color:#d87d7d;
+}
+
+.tittle {
+    text-align: center;
+    color: #d87d7d;
+    font-weight: bolder;
+}
