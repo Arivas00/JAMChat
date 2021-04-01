@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS jamchat_db;
+CREATE DATABASE jamchat_db;
