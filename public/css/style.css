@@ -1,5 +1,5 @@
 body {
-  background-color: #efefef;
+  background-color: #c895a4;
 }
 .form-group {
   padding: 10px;
@@ -10,12 +10,12 @@ body {
 }
 
 .logout {
-  color: #d87d7d;
+  color: #f0c531;
 }
 
 .title {
   text-align: center;
-  color: #d87d7d;
+  color: #f0c531;
   font-weight: bolder;
 }
 
@@ -80,3 +80,11 @@ body {
   display: flex;
   justify-content: center;
 } */
+
+nav {
+  background: #2c3c3d;
+}
+
+.btn {
+  background: #f0c531;
+}
