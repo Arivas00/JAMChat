@@ -20,10 +20,17 @@
             <h3 class="title">JamChat</h3>
 
         </div>
+        {{#if logged_in}}
+        <button class="no-button" id="logout">Logout</button>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+
     </nav>
     <div>
         {{{body}}}
     </div>
-</body>
+    {{#if logged_in}}
+    <script src="/public/js/logout.js" {{/if}} </body>
 
-</html>
+</html >
