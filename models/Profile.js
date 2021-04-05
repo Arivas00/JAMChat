@@ -12,7 +12,7 @@ Profile.init(
       autoIncrement: true,
     },
     bio: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     user_id: {
