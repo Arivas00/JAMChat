@@ -1,7 +1,11 @@
 <div class="card">
     <main style="padding: 50px;">
-
-        <ul id="messages"></ul>
+        {{!-- get this checked --}}
+        <ul id="messages">
+            {{#each users as |user| }}
+            <h2>{{user.name}}</h2>
+            {{/each}}
+        </ul>
         <form id="form" action="" class="bottom">
             <input id="input" autocomplete="off" /><button>Send</button>
         </form>

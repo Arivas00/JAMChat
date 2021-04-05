@@ -3,8 +3,9 @@ const { Profile, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  res.render('chat');
+  res.render('login');
 });
+
 
 router.get('/profile', withAuth, async (req, res) => {
   try {
@@ -33,6 +34,13 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/chat', (req, res) => {
+  res.render('chat');
+});
+router.get('/create', (req, res) => {
+  res.render('create');
 });
 
 module.exports = router;
