@@ -11,13 +11,8 @@ Profile.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-    },
     bio: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: true,
     },
     user_id: {
