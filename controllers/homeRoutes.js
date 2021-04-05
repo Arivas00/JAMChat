@@ -6,7 +6,6 @@ router.get('/', async (req, res) => {
   res.render('login');
 });
 
-
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
