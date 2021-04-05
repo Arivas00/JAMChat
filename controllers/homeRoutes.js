@@ -7,4 +7,7 @@ router.get('/', async (req, res) => {
 router.get('/chat', (req, res) => {
   res.render('chat');
 });
+router.get('/create', (req, res) => {
+  res.render('create');
+});
 module.exports = router;
