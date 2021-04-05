@@ -6,11 +6,11 @@ const sequelize = require('./config/connection');
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 
-const exphbs = require('express-handlebars'); // requiring handlebars
+const exphbs = require('express-handlebars');
 
 const PORT = process.env.PORT || 3001;
 
-const hbs = exphbs.create({}); //
+const hbs = exphbs.create({});
 
 io.on('connection', (socket) => {
   socket.on('chat message', (msg) => {
