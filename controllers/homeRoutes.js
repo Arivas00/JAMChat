@@ -36,7 +36,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/chat', (req, res) => {
+router.get('/chat', withAuth, (req, res) => {
   res.render('chat');
 });
 router.get('/create', (req, res) => {
