@@ -10,12 +10,12 @@ const loginFormHandler = async (event) => {
     // Send the e-mail and password to the server
     const response = await fetch('/api/users/login', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ username, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/chat');
     } else {
       alert('Failed to log in');
     }
