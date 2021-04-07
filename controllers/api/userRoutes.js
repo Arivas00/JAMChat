@@ -62,6 +62,7 @@ router.post('/logout', (req, res) => {
 });
 
 router.post('/lookup', async (req, res) => {
+  //work on
   try {
     const userData = await User.findOne({
       where: { username: req.body.username },
