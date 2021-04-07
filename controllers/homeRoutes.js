@@ -41,5 +41,8 @@ router.get('/chat', withAuth, (req, res) => {
 router.get('/create', (req, res) => {
   res.render('create');
 });
+router.get('/profile', (req, res) => {
+  res.render('profile');
+});
 
 module.exports = router;

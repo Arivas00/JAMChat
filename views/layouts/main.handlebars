@@ -17,12 +17,16 @@
                 <img src="/images/jamchat_transparent.png" alt="logo" width="60" height="53"
                     class="d-inline-block align-text-top">
             </a>
-            <h3 class="title">JamChat</h3>
-            {{#if logged_in}}
-            <button class="btn" id="logout">Logout</button>
-            {{else}}
-            <button class="btn"><a class='createText' href="/login">Login</a></button>
-            {{/if}}
+            <h2 class="title">JamChat</h3>
+                <div>
+                    <input name="search" id="search" type="text" placeholder="search profile" />
+                    <button class="btn" id="search-btn">Search</button>
+                </div>
+                {{!-- {{#if logged_in}}
+                <button class="btn" id="logout">Logout</button>
+                {{else}}
+                <button class="btn"><a class='createText' href="/login">Login</a></button>
+                {{/if}} --}}
         </div>
 
 
@@ -30,9 +34,12 @@
     <div>
         {{{body}}}
     </div>
-    {{#if logged_in}}
-    <script src="/public/js/logout.js"></script>
-    {{/if}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    {{!-- {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}} --}}
+    <script src="/js/profile.js"></script>
 </body>
 
 </html>
