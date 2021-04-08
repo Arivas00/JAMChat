@@ -37,9 +37,11 @@ app.use(routes);
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 
+
+
 io.on('connection', (socket) => {
-  socket.on('chat message', (msg) => {
-    io.emit('chat message', msg);
+  socket.on('chat message', (msg, username) => {
+    io.emit('chat message', msg, username);
   });
 });
 

@@ -1,3 +1,4 @@
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -13,7 +14,6 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       document.location.replace('/chat');
-      localStorage.setItem("username", username);
     } else {
       alert('Failed to log in');
     }
