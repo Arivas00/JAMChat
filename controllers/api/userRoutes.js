@@ -4,11 +4,7 @@ const { User, Profile } = require('../../models');
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
-    const profile = await Profile.create(); //creates profile
-    userData.setProfile(profile); //associates foreign key with user. Set is one to one association where add is one to many
-    if (req.body.profile) {
-      profile.update({ bio: req.body.profile });
-    }
+
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
