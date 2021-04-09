@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Profile, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+//homepage route
 router.get('/', async (req, res) => {
   res.render('login');
 });
@@ -25,26 +26,36 @@ router.get('/users', withAuth, async (req, res) => {
   }
 });
 
+//route to login page
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/');
     return;
   }
-
   res.render('login');
 });
 
+//chat page route
 router.get('/chat', withAuth, (req, res) => {
-  res.render('chat');
+  if (req.session.logged_in) {
+    res.render('chat');
+  } else {
+    res.redirect('/login');
+  }
 });
+
+//signup page route
 router.get('/create', (req, res) => {
   res.render('create');
 });
-router.get('/profile', (req, res) => {
-  res.render('profile');
-});
 
+//profile route
+router.get('/profile', withAuth, (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+  }
+  res.render('login');
+});
 
 router.get('/user', withAuth, async (req, res) => {
   try {
