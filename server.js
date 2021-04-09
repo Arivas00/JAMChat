@@ -15,7 +15,7 @@ const hbs = exphbs.create({ helpers });
 
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: { maxAge: 60000 },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -36,8 +36,6 @@ app.use(routes);
 
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
-
-
 
 io.on('connection', (socket) => {
   socket.on('chat message', (msg, username) => {
