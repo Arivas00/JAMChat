@@ -16,40 +16,47 @@
 </head>
 
 <body>
-    {{!-- navbar --}}
-    <nav class="navbar">
-        <div class="container-fluid">
-            {{!-- Custom logo. clicking sends user back to homepage --}}
-            <a class="navbar-brand" href="/">
-                <img src="/images/jamchat_transparent.png" alt="logo" width="60" height="53"
-                    class="d-inline-block align-text-top">
-            </a>
-            {{!-- navbar title --}}
-            <h2 class="title">JamChat</h2>
-            {{!-- show logout button if logged in, otherwise show login button instead --}}
-            {{#if logged_in}}
-            <button class="btn" id="logout">Logout</button>
-            {{else}}
-            <button class="btn"><a class='createText' href="/login">Login</a></button>
-            {{/if}}
+    <div class="flex-column justify-space-around">
+
+        {{!-- navbar --}}
+        <nav class="navbar">
+            <div class="container-fluid">
+                {{!-- Custom logo. clicking sends user back to homepage --}}
+                <a class="navbar-brand" href="/">
+                    <img src="/images/jamchat_transparent.png" alt="logo" width="60" height="53"
+                        class="d-inline-block align-text-top">
+                </a>
+
+                <h1 class="title">JamChat</h1>
+
+                {{!-- show logout button if logged in --}}
+                {{#if logged_in}}
+                <button class="btn" id="logout">Logout</button>
+                {{/if}}
+            </div>
+        </nav>
+
+        {{!-- display body --}}
+        <div class="content">
+            <main class="container container-fluid mt-5">
+                {{{body}}}
+            </main>
+
+            {{!-- custom footer --}}
+            <footer class="footer">
+                JamChat&trade; and &copy; 2021 Juan Sanchez, Alex Chisar and Mohammad Rouf
+            </footer>
         </div>
-    </nav>
-    {{!-- display body --}}
-    <div class="content">
-        {{{body}}}
     </div>
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     {{!-- run logout script if logged in --}}
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
-    {{!-- custom footer --}}
-    <div>
-        <footer class="footer">
-            JamChat&trade; and &copy; 2021 Juan Sanchez, Alex Chisar and Mohammad Rouf
-        </footer>
-    </div>
 </body>
 
 </html>
