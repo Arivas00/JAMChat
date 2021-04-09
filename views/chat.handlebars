@@ -1,17 +1,21 @@
-<nav class="navbar">
+{{!-- <nav class="navbar">
     <div class="container-fluid">
         <button class="btn" id="logout">Logout</button>
     </div>
-</nav>
+</nav> --}}
 <div class="card">
-    <main style="padding: 50px;">
+    {{!-- <main style="padding: 20px;"> --}}
         <ul id="messages">
         </ul>
         <form id="form" action="" class="bottom">
             <input id="input" autocomplete="off" /><button>Send</button>
+
         </form>
-    </main>
+        {{!--
+    </main> --}}
 </div>
+
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/chat.js"></script>
-<script src="/js/logout.js"></script>
+{{!--
+<script src="/js/logout.js"></script> --}}
