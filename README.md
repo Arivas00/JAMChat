@@ -6,25 +6,29 @@
 
 Global chat application where users can talk about any subject.
 
+## Motivation
+
+We were motivated by facebook’s ability to connect with others globally but the simplicity of the slack so we wanted to combine a simple chat application connecting people around the world.
+
 ### Table of Contents
 
 * [Installation](#installation)
 
-* [Usage](#usage)
+* [Demo](#demo)
 
 * [License](#license)
 
-* [Questions](#questions)
-
 * [Contact](#contact)
+
+* [Links](#links)
 
 ## Installation
 
 Deployed to Heroku
 
-## Usage
+## Demo
 
-Usage Information
+![jamchat](./public/images/jamchatdemo.gif)
 
 ## License
 
@@ -53,6 +57,8 @@ mrouf82@gmail.com
 
 ## Links
 
-[Github Repository](https://github.com/Arivas00/JAMChat)
+[JamChat Repository](https://github.com/Arivas00/JAMChat)
 
-[User Workflow](https://docs.google.com/document/d/1fQLXkvS7oQ8BPgvhloA0_IRQSUBL0_pSvyhKCAf4EbI/edit?ts=60625ff4)
+[JamChat User Workflow](https://docs.google.com/document/d/1fQLXkvS7oQ8BPgvhloA0_IRQSUBL0_pSvyhKCAf4EbI/edit?ts=60625ff4)
+
+[JamChat Presentation](https://docs.google.com/presentation/d/1wINoc51DG0HzBdhsjOuFsqTMqFM9qHN14n4eD1bQtc4/edit?usp=sharing)
