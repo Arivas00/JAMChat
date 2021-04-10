@@ -13,7 +13,6 @@ form.addEventListener('submit', function (e) {
         return response.json();
       })
       .then(function (data) {
-        console.log(data);
         username = data.username;
         socket.emit('chat message', input.value, username);
         input.value = '';
