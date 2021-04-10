@@ -20,6 +20,8 @@ const sess = {
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize,
+    checkExpirationInterval: 60 * 60 * 1000,
+    expiration: 60 * 60 * 1000,
   }),
 };
 
@@ -36,8 +38,6 @@ app.use(routes);
 
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
-
-
 
 io.on('connection', (socket) => {
   socket.on('chat message', (msg, username) => {
