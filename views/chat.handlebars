@@ -1,10 +1,19 @@
 <div class="card">
-    <main style="padding: 50px;">
-        <ul id="messages">
+    <main>
+        <ul class="pages">
+            <li class="chat page">
+                <div class="chatArea">
+                    <ul id="messages"></ul>
+                    <br>
+                    <br>
+                    <form id="form" action="" class="bottom">
+                        <input class="inputMessage" id="input" autocomplete="off"
+                            placeholder="Type here..." /><button>Send</button>
+                    </form>
+                </div>
+            </li>
         </ul>
-        <form id="form" action="" class="bottom">
-            <input id="input" autocomplete="off" /><button>Send</button>
-        </form>
+
     </main>
 </div>
 <script src="/socket.io/socket.io.js"></script>
