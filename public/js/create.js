@@ -12,9 +12,9 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/chat');
     } else {
-      alert('Failed to log in');
+      alert('Unable to create account');
     }
   }
 };
